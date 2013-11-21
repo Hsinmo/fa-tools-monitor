@@ -84,13 +84,14 @@
             // 
             // Message_groupBox
             // 
-            this.Message_groupBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
+            this.Message_groupBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+                        | System.Windows.Forms.AnchorStyles.Left)
                         | System.Windows.Forms.AnchorStyles.Right)));
             this.Message_groupBox.Controls.Add(this.Clear_Message_button);
             this.Message_groupBox.Controls.Add(this.Infor_richTextBox);
-            this.Message_groupBox.Location = new System.Drawing.Point(12, 237);
+            this.Message_groupBox.Location = new System.Drawing.Point(12, 198);
             this.Message_groupBox.Name = "Message_groupBox";
-            this.Message_groupBox.Size = new System.Drawing.Size(779, 209);
+            this.Message_groupBox.Size = new System.Drawing.Size(779, 248);
             this.Message_groupBox.TabIndex = 4;
             this.Message_groupBox.TabStop = false;
             this.Message_groupBox.Text = "Messages";
@@ -107,13 +108,14 @@
             // 
             // Infor_richTextBox
             // 
-            this.Infor_richTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
+            this.Infor_richTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+                        | System.Windows.Forms.AnchorStyles.Left)
                         | System.Windows.Forms.AnchorStyles.Right)));
             this.Infor_richTextBox.Location = new System.Drawing.Point(7, 41);
             this.Infor_richTextBox.Name = "Infor_richTextBox";
             this.Infor_richTextBox.ReadOnly = true;
             this.Infor_richTextBox.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Vertical;
-            this.Infor_richTextBox.Size = new System.Drawing.Size(766, 162);
+            this.Infor_richTextBox.Size = new System.Drawing.Size(766, 201);
             this.Infor_richTextBox.TabIndex = 0;
             this.Infor_richTextBox.Text = "";
             // 
@@ -243,6 +245,7 @@
             this.Controls.Add(this.Connection_groupBox);
             this.Name = "MonitorControlForm";
             this.Text = "MonitorControlForm";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MonitorControlForm_FormClosing);
             this.Connection_groupBox.ResumeLayout(false);
             this.Connection_groupBox.PerformLayout();
             this.Message_groupBox.ResumeLayout(false);

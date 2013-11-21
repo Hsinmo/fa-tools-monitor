@@ -33,13 +33,12 @@ namespace FA_TOOL_SOFTWARE
         private const Parity Default_Parity = Parity.None;
         private string Setting_ComPort_Name = String.Empty;
 
-
-
-
         public _Driver_SerialPortClass()
         {
            
         }
+
+
         public bool is_ComPort_Open(){
             return gSerialComPort.IsOpen;
         }
