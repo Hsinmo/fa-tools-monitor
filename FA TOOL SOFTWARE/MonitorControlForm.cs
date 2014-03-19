@@ -159,6 +159,10 @@ namespace FA_TOOL_SOFTWARE
         delegate void SetTextCallback(string text);
         public void SetText(string text)
         {
+            if (Infor_richTextBox.IsDisposed)
+            {
+                return;
+            }
             // InvokeRequired required compares the thread ID of the
             // calling thread to the thread ID of the creating thread.
             // If these threads are different, it returns true.
@@ -177,6 +181,10 @@ namespace FA_TOOL_SOFTWARE
         private delegate void myUICallBack(string myStr, Control ctl, Color back_clor);
         private void UpdateMyUI(string myStr, Control ctl, Color back_clor)
         {
+            if (ctl.IsDisposed)
+            {
+                return;
+            }
             if (this.InvokeRequired)
             {
                 myUICallBack myUpdate = new myUICallBack(UpdateMyUI);
@@ -188,7 +196,24 @@ namespace FA_TOOL_SOFTWARE
                 ctl.BackColor = back_clor;
             }
         }
-
+        // This delegate enables asynchronous calls for setting
+        // the text property on a TextBox control.
+        delegate void SetFunctionStatusCallback(bool flag);
+        public void SetFunctionStatus(bool flag)
+        {
+            // InvokeRequired required compares the thread ID of the
+            // calling thread to the thread ID of the creating thread.
+            // If these threads are different, it returns true.
+            if (this.InvokeRequired)
+            {
+                SetFunctionStatusCallback statusUpdate = new SetFunctionStatusCallback(SetFunctionStatus);
+                this.Invoke(statusUpdate, flag);//, ctl);
+            }
+            else
+            {
+                //show_communication_status(flag);
+            }
+        }
         private void SendData_ForFATool_button_Click(object sender, EventArgs e)
         {
             if (SendData_ForFATool_textBox.Text == string.Empty)

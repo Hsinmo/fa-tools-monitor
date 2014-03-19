@@ -244,7 +244,7 @@
             this.Controls.Add(this.Message_groupBox);
             this.Controls.Add(this.Connection_groupBox);
             this.Name = "MonitorControlForm";
-            this.Text = "MonitorControlForm";
+            this.Text = "MonitorControlForm (V2.0.0 by Hsinmo)";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MonitorControlForm_FormClosing);
             this.Connection_groupBox.ResumeLayout(false);
             this.Connection_groupBox.PerformLayout();
