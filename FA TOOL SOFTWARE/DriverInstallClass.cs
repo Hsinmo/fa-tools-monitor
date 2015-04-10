@@ -50,7 +50,7 @@ namespace FA_TOOL_SOFTWARE
             }
             sourceFile = System.IO.Path.Combine(sourcePath, fileName_devcon);
             destFile = System.IO.Path.Combine(Sys32Path, fileName_devcon);
-            if (!System.IO.File.Exists(destFile))
+            if (!System.IO.File.Exists(destFile) )
             {
                 System.IO.File.Copy(sourceFile, destFile, true);
             }
